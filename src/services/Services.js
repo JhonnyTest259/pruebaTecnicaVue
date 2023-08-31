@@ -15,7 +15,7 @@ const apiClient = axios.create({
     headers: options.headers
 });
 
-export const fetchData = async () => {
+const fetchData = async () => {
     try {
         const response = await apiClient.get('/discover/movie');
         return response.data;
@@ -23,3 +23,10 @@ export const fetchData = async () => {
         throw error;
     }
 }
+
+const sum = (a, b) => {
+    return a + b;
+}
+
+// export { fetchData, sum }
+module.exports = sum
